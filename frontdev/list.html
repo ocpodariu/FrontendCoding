@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Demo HR</title>
+
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <h1>HR Employee List Page</h1>
+
+    <div class="panel panel-default">
+        <div class="panel-heading description">
+            Employee List
+        </div>
+
+        <div class="panel-body">
+            <div>
+                <p>
+                    <button onclick = "showList()">Show List</button>
+                    <button onclick = "hideList()">Hide List</button>
+                </p>
+            </div>
+
+            <div id="listcontainer">
+                <!-- dynamically filled by app.js/showList()-->
+            </div>
+        </div>
+    </div>
+
+    <div class = "panel panel-default">
+        <div class = "panel-heading description">
+            Total Salary
+        </div>
+        <div class = "panel-body">
+            <p>
+                <button onclick = "showTotalSalary()">Show Total Salary</button>
+                <button onClick = "hideTotalSalary()">Hide Total Salary</button>
+            </p>
+
+            <div id = "totalSalaryContainer">
+                <!-- dynamically filled by app.js/showTotalSalary()-->
+            </div>
+        </div>
+    </div>
+
+    <div class = "panel panel-default">
+        <div class = "panel-heading description">
+            Add employee
+        </div>
+
+        <div class = "panel-body">
+            <p>
+                First Name: <input type = "text" id = "firstName"/>
+            </p>
+            <p>
+                Last Name: <input type = "text" id = "lastName"/>
+            </p>
+            <p>
+                Phone: <input type = "text" id = "phone"/>
+            </p>
+            <p>
+                Salary: <input type = "text" id = "salary"/>
+            </p>
+            <p>
+                <button onclick = "addEmployee()">Add Employee</button>
+            </p>
+        </div>
+    </div>
+
+    <div class = "panel panel-default">
+        <div class = "panel-heading description">
+            Delete Last Employee
+        </div>
+
+        <div class = "panel-body">
+            <p>
+                <button onclick = "deleteLastEmployee()">Delete Last Employee</button>
+            </p>
+        </div>
+    </div>
+
+    <div>
+        <a href="index.html">Back to Home Page</a>
+    </div>
+</body>
+
+<script type="text/javascript" src="scripts/app.js"></script>
+
+</html>
