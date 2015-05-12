@@ -23,6 +23,10 @@
                     <button onclick = "showList()">Show List</button>
                     <button onclick = "hideList()">Hide List</button>
                 </p>
+                <p>
+                    <input type = "text" id = "sortBy"/>
+                    <button onclick = "sort()">Sort</button>
+                </p>
             </div>
 
             <div id="listcontainer">
@@ -63,7 +67,7 @@
                 Phone: <input type = "text" id = "phone"/>
             </p>
             <p>
-                Salary: <input type = "text" id = "salary"/>
+                Salary: <input type = "number" id = "salary"/>
             </p>
             <p>
                 <button onclick = "addEmployee()">Add Employee</button>

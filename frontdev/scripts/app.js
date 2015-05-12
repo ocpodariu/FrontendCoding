@@ -79,7 +79,7 @@ function showList() {
         '<td>' + commonFirstName + '</td>' +
         '<td>' + uniqueLastNames + '</td>' +
         '<td>' + commonPhoneNumberDigits + '</td>' +
-        '<td>' + averageSalary + '</td>' +
+        '<td>' + averageSalary.toFixed(2) + '</td>' +
         '<td> - </td>' +
         '<td> - </td>' +
         '</tr>';
@@ -164,6 +164,43 @@ function calculateAverageSalary() {
 function hideList() {
     var container = document.getElementById('listcontainer');
     container.style.display = 'none';
+}
+
+function sort() {
+    var sortType = document.getElementById("sortBy").value;
+
+    // Possible sortings:
+    //      1 - by first name;
+    //      2 - by last name;
+    //      3 - by phone number;
+    //      4 - by salary;
+    switch (sortType) {
+        case "1":
+            employeesList.sort(function(a, b) {
+                return a.firstName.localeCompare(b.firstName);
+            });
+            break;
+
+        case "2":
+            employeesList.sort(function(a, b) {
+                return a.lastName.localeCompare(b.lastName);
+            });
+            break;
+
+        case "3":
+            employeesList.sort(function(a, b) {
+                return a.phone.localeCompare(b.phone);
+            });
+            break;
+
+        case "4":
+            employeesList.sort(function(a, b) {
+                return a.salary - b.salary;
+            });
+            break;
+    }
+
+    showList();
 }
 
 function showTotalSalary() {
