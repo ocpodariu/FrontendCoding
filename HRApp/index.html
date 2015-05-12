@@ -10,11 +10,17 @@
 </head>
 
 <body>
-<h2>HR Application</h2>
+<div ng-app="hrApp">
+    <div ng-include="'views/menu.html'"></div>
+
+    <h2>HR Application</h2>
+</div>
 
 <script type="text/javascript" src="bower_components/jquery/jquery.js"></script>
 <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="scripts/app.js"></script>
+<script type="text/javascript" src="scripts/EmployeeController.js"></script>
 </body>
 
 </html>
