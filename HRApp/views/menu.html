@@ -1,0 +1,20 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand">Menu</a>
+        </div>
+
+        <div>
+            <ul class="nav navbar-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button">Employees <span class="caret"></span></a>
+
+                    <ul class="dropdown-menu" role="menu" ng-controller="EmployeeController">
+                        <li ng-repeat="action in employeeActionList"><a href="{{action.url}}">{{action.label}}</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
