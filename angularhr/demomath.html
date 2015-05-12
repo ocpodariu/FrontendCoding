@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Demo Math</title>
+
+    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap-theme.css">
+</head>
+
+<body>
+<h2>Demo Math</h2>
+
+<div ng-app="hrApp">
+    <div ng-controller="MathController">
+        <div class="lead">
+            <p>Number A: <input type="number" ng-model="numberA"></p>
+            <p>Number B: <input type="number" ng-model="numberB"></p>
+
+            <p><a class="btn btn-primary btn-sm" role="button" ng-click="calculate()">Calculate</a></p>
+        </div>
+
+        <div class="lead">
+            <p><strong>Addition:</strong> <span ng-bind="additionResult"></span></p>
+            <p><strong>Substraction:</strong> <span ng-bind="substractionResult"></span></p>
+            <p><strong>Multiplication:</strong> <span ng-bind="multiplicationResult"></span></p>
+            <p><strong>Division:</strong> <span ng-bind="divisionResult"></span></p>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../bower_components/jquery/jquery.js"></script>
+<script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="../scripts/app.js"></script>
+<script type="text/javascript" src="../scripts/MathController.js"></script>
+</body>
+
+</html>
