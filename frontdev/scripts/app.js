@@ -203,6 +203,43 @@ function sort() {
     showList();
 }
 
+function filter() {
+    var filterBy = document.getElementById("filterBy").value;
+
+    var myTable =
+        '<table border="1" class="table table-condensed table-striped">' +
+        '<tr>' +
+        '<th>First Name</th>' +
+        '<th>Last Name</th>' +
+        '<th>Phone</th>' +
+        '<th>Salary</th>' +
+        '<th>View</th>' +
+        '<th>Delete</th>' +
+        '</tr>';
+
+    // Show all employees
+    for (var id in employeesList) {
+        if ((employeesList[id].firstName === filterBy) ||
+            (employeesList[id].lastName === filterBy) ||
+            (employeesList[id].phone === filterBy))
+            myTable +=
+                '<tr>' +
+                '<td>' + employeesList[id].firstName + '</td>' +
+                '<td>' + employeesList[id].lastName + '</td>' +
+                '<td>' + employeesList[id].phone + '</td>' +
+                '<td>' + employeesList[id].salary + '</td>' +
+                '<td><button onclick = "showOneEmployee(' + id + ')">View details</button></td>' +
+                '<td><button onclick = "deleteOneEmployee(' + id + ')">Delete employee</button></td>' +
+                '</tr>'
+    }
+
+    myTable += '</table>';
+
+    var container = document.getElementById('listcontainer');
+    container.style.display = 'block';
+    container.innerHTML = myTable;
+}
+
 function showTotalSalary() {
     var myParagraph = '<p>';
 
