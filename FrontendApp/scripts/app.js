@@ -1,10 +1,16 @@
-// TODO #2 load ngRoute module
 //var hrApp = angular.module('hrApp', []);
 var hrApp = angular.module('hrApp', ['ngRoute']);
 
-// TODO #3 add default route for main page
 hrApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
+        .when('/empoyeeslist', {
+            templateUrl: 'views/employeelist.html',
+            controller: 'EmployeeListController'
+        })
+        .when('/employeeview/:employeeid', {
+            templateUrl: 'views/employeeview.html',
+            controller: 'EmployeeViewController'
+        })
         .when('/math', {
             templateUrl: 'views/demo/math.html',
             controller: 'MathController'
@@ -21,10 +27,6 @@ hrApp.config(['$routeProvider', function ($routeProvider) {
             controller: 'MainController'
         });
 }]);
-
-
-
-// TODO #9 add route for http request demo page
 
 // TODO #HR1 add routes for Employees List page and Employee View page
 
