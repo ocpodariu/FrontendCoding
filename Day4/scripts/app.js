@@ -25,9 +25,25 @@ hrApp.config(['$routeProvider',
                 templateUrl: 'views/employeeview.html',
                 controller: 'EmployeeViewController'
             })
+            .when('/employeeadd', {
+                templateUrl: 'views/employeeadd.html',
+                controller: 'EmployeeAddController'
+            })
+            .when('/employeeedit/:employeeid', {
+                templateUrl: 'views/employeeedit.html',
+                controller: 'EmployeeEditController'
+            })
             .when('/user', {
                 templateUrl: 'views/demo/user.html',
                 controller: 'UserController'
+            })
+            .when('/colors', {
+                templateUrl: 'views/demo/colors.html',
+                controller: 'Colors'
+            })
+            .when('/forms', {
+                templateUrl: 'views/demo/form.html',
+                controller: 'Form'
             })
             .otherwise({
                 templateUrl: 'views/main.html',

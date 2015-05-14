@@ -1,14 +1,55 @@
 <div class="container">
 
-    <!--TODO #5 create the ng-form element -->
+    <ng-form name="exampleForm">
+        <input name="input" ng-model="userType" required>
 
-        <!--TODO#7-->
-        <br>
-        userType = {{userType}}<br>
-        <p>Input properties</p>
-        <!--TODO#6-->
-        <p>Form Properties</p>
-        <!--TODO #5 list form properties values-->
+        <p class="lead">userType = {{userType}}</p>
 
+        <span class="lead" ng-show="exampleForm.input.$error.required">Input required!</span>
+
+        <table class="table table-striped">
+            <tr>
+                <th>Property</th>
+                <th>Form Property Value</th>
+                <th>Input Property Value</th>
+            </tr>
+
+            <tr>
+                <td>Pristine</td>
+                <td>{{exampleForm.$pristine}}</td>
+                <td>{{exampleForm.input.$pristine}}</td>
+            </tr>
+
+            <tr>
+                <td>Dirty</td>
+                <td>{{exampleForm.$dirty}}</td>
+                <td>{{exampleForm.input.$dirty}}</td>
+            </tr>
+
+            <tr>
+                <td>Valid</td>
+                <td>{{exampleForm.$valid}}</td>
+                <td>{{exampleForm.input.$valid}}</td>
+            </tr>
+
+            <tr>
+                <td>Invalid</td>
+                <td>{{exampleForm.$invalid}}</td>
+                <td>{{exampleForm.input.$invalid}}</td>
+            </tr>
+
+            <tr>
+                <td>Submitted</td>
+                <td>{{exampleForm.$submitted}}</td>
+                <td>{{exampleForm.input.$submitted}}</td>
+            </tr>
+
+            <tr>
+                <td>Error</td>
+                <td>{{exampleForm.$error}}</td>
+                <td>{{exampleForm.input.$error}}</td>
+            </tr>
+        </table>
+    </ng-form>
 
 </div>

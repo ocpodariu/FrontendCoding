@@ -22,6 +22,10 @@ hrApp.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'views/demo/request.html',
             controller: 'RequestController'
         })
+        .when('/user', {
+            templateUrl: 'views/demo/user.html',
+            controller: 'UserController'
+        })
         .otherwise({
             templateUrl: 'views/main.html', // relativ la root-ul aplicatiei ('/')
             controller: 'MainController'
