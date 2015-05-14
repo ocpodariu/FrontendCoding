@@ -3,7 +3,7 @@ var hrApp = angular.module('hrApp', ['ngRoute']);
 
 hrApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
-        .when('/empoyeeslist', {
+        .when('/employeeslist', {
             templateUrl: 'views/employeelist.html',
             controller: 'EmployeeListController'
         })
@@ -27,6 +27,3 @@ hrApp.config(['$routeProvider', function ($routeProvider) {
             controller: 'MainController'
         });
 }]);
-
-// TODO #HR1 add routes for Employees List page and Employee View page
-

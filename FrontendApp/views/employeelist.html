@@ -11,7 +11,6 @@
         <th>Commission</th>
         <th class="col-lg-2 text-center">Manager</th>
         <th>Department</th>
-        <!--TODO #HR4 add Actions column-->
         <th class="col-lg-3 text-center">Actions</th>
     </tr>
     <tr ng-repeat="employee in employees">
@@ -48,7 +47,8 @@
         <td class="text-center">
             {{employee.departmentId.departmentName}}
         </td>
-        <!--TODO #HR5 add View button-->
-
+        <td>
+            <a class="btn btn-primary btn-sm" role="button" ng-click="viewEmployee(employee.employeeId)">View</a>
+        </td>
     </tr>
 </table>
