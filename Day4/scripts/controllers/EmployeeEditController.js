@@ -10,7 +10,7 @@ hrApp.controller('EmployeeEditController', ['$scope', '$http', '$routeParams', '
         $scope.managers = [];
 
         $http.get($commonResourcesFactory.findOneEmployeeUrl + $routeParams.employeeid)
-            .success(function(data, status, header, config) {
+            .success(function (data, status, header, config) {
                 $scope.employee = data;
             });
 

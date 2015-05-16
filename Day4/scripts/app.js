@@ -1,11 +1,5 @@
-// TODO load ngRoute module
 //var hrApp = angular.module('hrApp', []);
 var hrApp = angular.module('hrApp', ['ngRoute']);
-
-// TODO add default route for main page
-// TODO add route for Employees List page
-// TODO add route for Employee View page
-
 
 hrApp.config(['$routeProvider',
     function($routeProvider) {
@@ -17,6 +11,8 @@ hrApp.config(['$routeProvider',
                 templateUrl: 'views/demo/math.html',
                 controller: 'MathController'
             })
+
+
             .when('/employeeslist', {
                 templateUrl: 'views/employeelist.html',
                 controller: 'EmployeeListController'
@@ -33,6 +29,44 @@ hrApp.config(['$routeProvider',
                 templateUrl: 'views/employeeedit.html',
                 controller: 'EmployeeEditController'
             })
+
+
+            .when('/jobslist', {
+                templateUrl: 'views/joblist.html',
+                controller: 'JobListController'
+            })
+            .when('/jobview/:jobid', {
+                templateUrl: 'views/jobview.html',
+                controller: 'JobViewController'
+            })
+            .when('/jobadd', {
+                templateUrl: 'views/jobadd.html',
+                controller: 'JobAddController'
+            })
+            .when('/jobedit/:jobid', {
+                templateUrl: 'views/jobedit.html',
+                controller: 'JobEditController'
+            })
+
+
+            .when('/departmentslist', {
+                templateUrl: 'views/departmentlist.html',
+                controller: 'DepartmentListController'
+            })
+            .when('/departmentview/:departmentid', {
+                templateUrl: 'views/departmentview.html',
+                controller: 'DepartmentViewController'
+            })
+            .when('/departmentadd', {
+                templateUrl: 'views/departmentadd.html',
+                controller: 'DepartmentAddController'
+            })
+            .when('/departmentedit/:departmentid', {
+                templateUrl: 'views/departmentedit.html',
+                controller: 'DepartmentEditController'
+            })
+
+
             .when('/user', {
                 templateUrl: 'views/demo/user.html',
                 controller: 'UserController'
@@ -52,8 +86,6 @@ hrApp.config(['$routeProvider',
     }])
     .run(['$rootScope',
         function ($rootScope) {
-
-            // TODO
 
         }
     ]);
