@@ -1,0 +1,44 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">Edit department <b>{{department.departmentName}}</b></h2>
+    </div>
+    <div class="panel-body">
+        <ng-form name="departmentEditForm">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group" ng-class="{'has-error' : departmentEditForm.departmentId.$invalid && departmentEditForm.departmentId.$dirty}">
+                        <label for="departmentId">Department ID:</label>
+                        <input id="departmentId" name="departmentId" type="text" class="form-control" placeholder="Department ID" ng-model="department.departmentId" required>
+                        <span class="help-block" ng-show="departmentEditForm.departmentId.$error.required && departmentEditForm.departmentId.$dirty">{{requiredErrorMessage}}</span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group" ng-class="{'has-error' : departmentEditForm.departmentName.$invalid && departmentEditForm.departmentName.$dirty}">
+                        <label for="departmentName">Department Name:</label>
+                        <input id="departmentName" name="departmentName" type="text" class="form-control" placeholder="Department Name" ng-model="department.departmentName" required>
+                        <span class="help-block" ng-show="departmentEditForm.departmentName.$error.required && departmentEditForm.departmentName.$dirty">{{requiredErrorMessage}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group" ng-class="{'has-error' : departmentEditForm.locationId.$invalid && departmentEditForm.locationId.$dirty}">
+                        <label for="locationId">Location:</label>
+                        <select id="locationId" name="locationId" class="form-control" ng-model="department.locationId" required
+                                ng-options="location.city for location in locations track by location.locationId">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5"></div>
+                <div class="col-md-7">
+                    <div class="container">
+                        <a class="btn btn-primary btn-lg" role="button" ng-click="create(department)" ng-disabled="departmentEditForm.$invalid">Save</a>
+                        <a class="btn btn-default btn-lg" role="button" ng-click="reset()">Reset</a>
+                    </div>
+                </div>
+            </div>
+        </ng-form>
+    </div>
+</div>
