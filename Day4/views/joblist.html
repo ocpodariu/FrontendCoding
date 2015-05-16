@@ -1,0 +1,45 @@
+<table class="table table-striped">
+    <tr>
+        <th class="text-center">ID</th>
+        <th class="text-center">Title</th>
+        <th class="text-center">Max salary</th>
+        <th class="text-center">Min salary</th>
+        <th class="col-lg-3 text-center">Actions</th>
+    </tr>
+    <tr ng-repeat="job in jobs">
+        <td class="text-center">
+            {{job.jobId}}
+        </td>
+        <td class="text-center">
+            {{job.jobTitle}}
+        </td>
+        <td class="text-center">
+            {{job.maxSalary}}
+        </td>
+        <td class="text-center">
+            {{job.minSalary}}
+        </td>
+        <td class="text-center">
+            <button type="button" class="btn btn-link" ng-click="viewJob(job.jobId)">View</button>
+            <button type="button" class="btn btn-link" ng-click="editJob(job.jobId)">Edit</button>
+            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#deleteJobModal" ng-click="setJobToBeDeleted(job.jobId)">Delete</button>
+        </td>
+
+        <div class="modal fade" id="deleteJobModal" tabindex="-1" role="dialog" aria-labelledby="deleteJobModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Delete job</h4>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure you want to delete this job?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="deleteJob()">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </tr>
+</table>

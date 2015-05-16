@@ -1,0 +1,50 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">Add new job</h2>
+    </div>
+    <div class="panel-body">
+        <ng-form name="jobAddForm">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group" ng-class="{'has-error' : jobAddForm.jobId.$invalid && jobAddForm.jobId.$dirty}">
+                        <label for="jobId">Job ID:</label>
+                        <input id="jobId" name="jobId" type="text" class="form-control" placeholder="Job ID" ng-model="job.jobId" required>
+                        <span class="help-block" ng-show="jobAddForm.jobId.$error.required && jobAddForm.jobId.$dirty">{{requiredErrorMessage}}</span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group" ng-class="{'has-error' : jobAddForm.jobTitle.$invalid && jobAddForm.jobTitle.$dirty}">
+                        <label for="jobTitle">Job Title:</label>
+                        <input id="jobTitle" name="jobTitle" type="text" class="form-control" placeholder="Job Title" ng-model="job.jobTitle" required>
+                        <span class="help-block" ng-show="jobAddForm.jobTitle.$error.required && jobAddForm.jobTitle.$dirty">{{requiredErrorMessage}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group" ng-class="{'has-error' : jobAddForm.maxSalary.$invalid && jobAddForm.maxSalary.$dirty}">
+                        <label for="maxSalary">Maximum Salary:</label>
+                        <input id="maxSalary" name="maxSalary" type="text" class="form-control" placeholder="Maximum Salary" ng-model="job.maxSalary" required>
+                        <span class="help-block" ng-show="jobAddForm.maxSalary.$error.required && jobAddForm.maxSalary.$dirty">{{requiredErrorMessage}}</span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group" ng-class="{'has-error' : jobAddForm.minSalary.$invalid && jobAddForm.minSalary.$dirty}">
+                        <label for="minSalary">Minimum Salary:</label>
+                        <input id="minSalary" name="minSalary" type="text" class="form-control" placeholder="Minimum Salary" ng-model="job.minSalary" required>
+                        <span class="help-block" ng-show="jobAddForm.minSalary.$error.required && jobAddForm.minSalary.$dirty">{{requiredErrorMessage}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5"></div>
+                <div class="col-md-7">
+                    <div class="container">
+                        <a class="btn btn-primary btn-lg" role="button" ng-click="create(job)" ng-disabled="jobAddForm.$invalid">Save</a>
+                        <a class="btn btn-default btn-lg" role="button" ng-click="reset()">Reset</a>
+                    </div>
+                </div>
+            </div>
+        </ng-form>
+    </div>
+</div>
