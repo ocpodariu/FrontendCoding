@@ -14,73 +14,73 @@ hrApp.config(['$routeProvider',
 
 
             .when('/employeeslist', {
-                templateUrl: 'views/employeelist.html',
+                templateUrl: 'views/employee/employeelist.html',
                 controller: 'EmployeeListController'
             })
             .when('/employeeview/:employeeid', {
-                templateUrl: 'views/employeeview.html',
+                templateUrl: 'views/employee/employeeview.html',
                 controller: 'EmployeeViewController'
             })
             .when('/employeeadd', {
-                templateUrl: 'views/employeeadd.html',
+                templateUrl: 'views/employee/employeeadd.html',
                 controller: 'EmployeeAddController'
             })
             .when('/employeeedit/:employeeid', {
-                templateUrl: 'views/employeeedit.html',
+                templateUrl: 'views/employee/employeeedit.html',
                 controller: 'EmployeeEditController'
             })
 
 
             .when('/jobslist', {
-                templateUrl: 'views/joblist.html',
+                templateUrl: 'views/job/joblist.html',
                 controller: 'JobListController'
             })
             .when('/jobview/:jobid', {
-                templateUrl: 'views/jobview.html',
+                templateUrl: 'views/job/jobview.html',
                 controller: 'JobViewController'
             })
             .when('/jobadd', {
-                templateUrl: 'views/jobadd.html',
+                templateUrl: 'views/job/jobadd.html',
                 controller: 'JobAddController'
             })
             .when('/jobedit/:jobid', {
-                templateUrl: 'views/jobedit.html',
+                templateUrl: 'views/job/jobedit.html',
                 controller: 'JobEditController'
             })
 
 
             .when('/departmentslist', {
-                templateUrl: 'views/departmentlist.html',
+                templateUrl: 'views/department/departmentlist.html',
                 controller: 'DepartmentListController'
             })
             .when('/departmentview/:departmentid', {
-                templateUrl: 'views/departmentview.html',
+                templateUrl: 'views/department/departmentview.html',
                 controller: 'DepartmentViewController'
             })
             .when('/departmentadd', {
-                templateUrl: 'views/departmentadd.html',
+                templateUrl: 'views/department/departmentadd.html',
                 controller: 'DepartmentAddController'
             })
             .when('/departmentedit/:departmentid', {
-                templateUrl: 'views/departmentedit.html',
+                templateUrl: 'views/department/departmentedit.html',
                 controller: 'DepartmentEditController'
             })
 
 
             .when('/locationslist', {
-                templateUrl: 'views/locationlist.html',
+                templateUrl: 'views/location/locationlist.html',
                 controller: 'LocationListController'
             })
             .when('/locationview/:locationid', {
-                templateUrl: 'views/locationview.html',
+                templateUrl: 'views/location/locationview.html',
                 controller: 'LocationViewController'
             })
             .when('/locationadd', {
-                templateUrl: 'views/locationadd.html',
+                templateUrl: 'views/location/locationadd.html',
                 controller: 'LocationAddController'
             })
             .when('/locationedit/:locationid', {
-                templateUrl: 'views/locationedit.html',
+                templateUrl: 'views/location/locationedit.html',
                 controller: 'LocationEditController'
             })
 
