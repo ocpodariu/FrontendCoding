@@ -27,7 +27,7 @@ hrApp.controller('DepartmentEditController', ['$scope', '$http', '$routeParams',
                 data: addDepartment
             }).
                 success(function (data) {
-                    $scope.employee = data;
+                    $scope.department = data;
                     $location.url('/departmentview/' + $scope.department.departmentId);
                 });
         }

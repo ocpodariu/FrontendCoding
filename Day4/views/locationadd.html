@@ -1,0 +1,50 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">Add new location</h2>
+    </div>
+    <div class="panel-body">
+        <ng-form name="locationAddForm">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group" ng-class="{'has-error' : locationAddForm.city.$invalid && locationAddForm.city.$dirty}">
+                        <label for="city">City:</label>
+                        <input id="city" name="city" type="text" class="form-control" placeholder="City" ng-model="location.city" required>
+                        <span class="help-block" ng-show="locationAddForm.city.$error.required && locationAddForm.city.$dirty">{{requiredErrorMessage}}</span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group" ng-class="{'has-error' : locationAddForm.postalCode.$invalid && locationAddForm.postalCode.$dirty}">
+                        <label for="postalCode">Postal Code:</label>
+                        <input id="postalCode" name="postalCode" type="text" class="form-control" placeholder="Postal Code" ng-model="location.postalCode" required>
+                        <span class="help-block" ng-show="locationAddForm.postalCode.$error.required && locationAddForm.postalCode.$dirty">{{requiredErrorMessage}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group" ng-class="{'has-error' : locationAddForm.stateProvince.$invalid && locationAddForm.stateProvince.$dirty}">
+                        <label for="stateProvince">State Province:</label>
+                        <input id="stateProvince" name="stateProvince" type="text" class="form-control" placeholder="State Province" ng-model="location.stateProvince" required>
+                        <span class="help-block" ng-show="locationAddForm.stateProvince.$error.required && locationAddForm.stateProvince.$dirty">{{requiredErrorMessage}}</span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group" ng-class="{'has-error' : locationAddForm.streetAddress.$invalid && locationAddForm.streetAddress.$dirty}">
+                        <label for="streetAddress">Street Address:</label>
+                        <input id="streetAddress" name="streetAddress" type="text" class="form-control" placeholder="Street Address" ng-model="location.streetAddress" required>
+                        <span class="help-block" ng-show="locationAddForm.streetAddress.$error.required && locationAddForm.streetAddress.$dirty">{{requiredErrorMessage}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5"></div>
+                <div class="col-md-7">
+                    <div class="container">
+                        <a class="btn btn-primary btn-lg" role="button" ng-click="create(location)" ng-disabled="locationAddForm.$invalid">Save</a>
+                        <a class="btn btn-default btn-lg" role="button" ng-click="reset()">Reset</a>
+                    </div>
+                </div>
+            </div>
+        </ng-form>
+    </div>
+</div>

@@ -31,3 +31,14 @@ hrApp.value('departmentActionsService', [
         url: '#/departmentadd'
     }
 ]);
+
+hrApp.value('locationActionsService', [
+    {
+        label: 'Location list',
+        url: '#/locationslist'
+    },
+    {
+        label: 'Add location',
+        url: '#/locationadd'
+    }
+]);

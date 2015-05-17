@@ -1,0 +1,49 @@
+<table class="table table-striped">
+    <tr>
+        <th class="text-center">ID</th>
+        <th class="text-center">City</th>
+        <th class="text-center">Postal Code</th>
+        <th class="text-center">State Province</th>
+        <th class="text-center">Street Address</th>
+        <th class="text-center">Actions</th>
+    </tr>
+    <tr ng-repeat="location in locations">
+        <td class="text-center">
+            {{location.locationId}}
+        </td>
+        <td class="text-center">
+            {{location.city}}
+        </td>
+        <td class="text-center">
+            {{location.postalCode}}
+        </td>
+        <td class="text-center">
+            {{location.stateProvince}}
+        </td>
+        <td class="text-center">
+            {{location.streetAddress}}
+        </td>
+        <td class="text-center">
+            <button type="button" class="btn btn-link" ng-click="viewLocation(location.locationId)">View</button>
+            <button type="button" class="btn btn-link" ng-click="editLocation(location.locationId)">Edit</button>
+            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#deleteLocationModal" ng-click="setLocationToBeDeleted(location.locationId)">Delete</button>
+        </td>
+
+        <div class="modal fade" id="deleteLocationModal" tabindex="-1" role="dialog" aria-labelledby="deleteLocationModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Delete location</h4>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure you want to delete this location?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="deleteLocation()">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </tr>
+</table>

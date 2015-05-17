@@ -67,6 +67,24 @@ hrApp.config(['$routeProvider',
             })
 
 
+            .when('/locationslist', {
+                templateUrl: 'views/locationlist.html',
+                controller: 'LocationListController'
+            })
+            .when('/locationview/:locationid', {
+                templateUrl: 'views/locationview.html',
+                controller: 'LocationViewController'
+            })
+            .when('/locationadd', {
+                templateUrl: 'views/locationadd.html',
+                controller: 'LocationAddController'
+            })
+            .when('/locationedit/:locationid', {
+                templateUrl: 'views/locationedit.html',
+                controller: 'LocationEditController'
+            })
+
+
             .when('/user', {
                 templateUrl: 'views/demo/user.html',
                 controller: 'UserController'
